@@ -1,0 +1,29 @@
+<html><head>
+<script src="https://aotest.shincredit.com.tw/js/jquery-3.5.1.min.js"></script>
+</head>
+<body >
+請參考:
+</br><img src="../Desktop/images/test.jpg" id="pic" style="width:400px">
+
+<input type="submit" class="btn" value="下一家">
+<input type="submit" class="back" value="回地圖">
+</body>
+<script type="text/javascript">
+ var pic=location.href.substring(location.href.indexOf('#')+1);
+ $('#pic').attr('src',$('#pic').attr('src').replace('test',pic));
+ $('.btn').click(function () {
+	var num=parseInt(location.href.substring(location.href.indexOf('#')+1))+1;
+	if(num<7){
+		$(location).attr('href', window.location.href = $(location).attr('href').substring(0,$(location).attr('href').indexOf('#')+1)+(num));
+				location.reload();
+	}else{
+				$(location).attr('href', window.location.href = $(location).attr('href').substring(0,$(location).attr('href').indexOf('#')+1)+(1));
+				location.reload();
+	}
+ });
+ $('.back').click(function () {
+	location.replace("C://Users/kyle.hsiao/Desktop/xxx.html");
+ });
+</script>
+
+</html>
