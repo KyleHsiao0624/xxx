@@ -13,7 +13,7 @@
  $('#pic').attr('src',$('#pic').attr('src').replace('test',pic));
  $('.btn').click(function () {
 	var num=parseInt(location.href.substring(location.href.indexOf('#')+1))+1;
-	if(num<7){
+	if(num<11){
 		$(location).attr('href', window.location.href = $(location).attr('href').substring(0,$(location).attr('href').indexOf('#')+1)+(num));
 				location.reload();
 	}else{
